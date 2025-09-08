@@ -1,3 +1,4 @@
+// server.js
 const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
@@ -24,6 +25,6 @@ app.get("/gamepasses/:userId", async (req, res) => {
     }
 });
 
-// ✅ IMPORTANT: use Heroku’s dynamic port
+// ✅ Use process.env.PORT (Render will inject it)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
